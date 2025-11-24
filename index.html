@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Cloud AI Image Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+            "imports": {}
+        }
+    </script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Unified AI Generator</h1>
+            <p>Leveraging AWS, Azure, & GCP for scalable image creation.</p>
+        </header>
+        
+        <div id="control-panel">
+            <div class="input-group">
+                <label for="prompt-input">Prompt:</label>
+                <textarea id="prompt-input" placeholder="A futuristic city viewed from a high-speed train, ultra detailed, concept art."></textarea>
+            </div>
+
+            <div class="option-row">
+                <div class="input-group">
+                    <label for="engine-select">Backend Engine:</label>
+                    <select id="engine-select">
+                        <option value="aws">AWS SageMaker (Scalable Training)</option>
+                        <option value="azure">Azure Cognitive Services (Feature Optimized)</option>
+                        <option value="gcp" selected>GCP Vertex AI (Latest Models)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="generate-button">Generate High-Quality Image</button>
+        </div>
+
+        <div id="result-container">
+            <div id="loading-overlay" class="hidden">
+                <div class="spinner"></div>
+                <p>Querying Unified API Gateway...</p>
+                <small>Processing image generation request across selected cloud infrastructure (approx. 10s)</small>
+            </div>
+            <img id="result-image" src="" alt="Generated Image" class="hidden">
+            <p id="placeholder-text">Generated images will appear here.</p>
+        </div>
+
+    </div>
+    
+    <script type="module" src="main.js"></script>
+</body>
+</html>
+
